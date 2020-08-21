@@ -120,6 +120,7 @@ public class UserActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(UserActivity.this, ChatActivity.class);
+        intent.putExtra("selectedUser", usersList.get(position));
         startActivity(intent);
 
     }
